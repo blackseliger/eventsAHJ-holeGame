@@ -1,0 +1,38 @@
+.hole-game {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+}
+
+.hole {
+    width: calc(25% - 20px);
+    height: 100px;
+    margin: 5px 5px;
+    background-color: cadetblue;
+    border-radius: 100%;
+
+}
+
+.hole_has_gnome {
+    background-image: url(/src/img/goblin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.button_start_game {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.start_game, .stop_game {
+    margin: 20px;
+    width: 200px;
+    height: 100px;
+    font-size: large;
+    background-color: darksalmon;
+    border: hidden;
+}
