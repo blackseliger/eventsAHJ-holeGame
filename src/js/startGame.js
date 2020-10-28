@@ -1,22 +1,20 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-plusplus */
+/* eslint-disable linebreak-style */
+
+import {
+  activateHole, deactivateHole, getHole, hole,
+} from './activateHole';
+import { reset, dead, lost } from './reset';
+
 const startGame = document.querySelector('.start_game');
 const stopGame = document.querySelector('.stop_game');
-const hole = [...document.querySelectorAll('.hole')];
-const dead = document.querySelector('.dead');
-const lost = document.querySelector('.lost');
 
 let playing = false;
 let activeHole = 0;
 
 startGame.addEventListener('click', () => {
   playing = true;
-  const getHole = (index) => document.getElementById(`hole${index}`);
-  const deactivateHole = (index) => {
-    hole[index].classList.remove('hole_has_gnome');
-  };
-  const activateHole = (index) => {
-    hole[index].classList.add('hole_has_gnome');
-  };
 
   const next = () => setTimeout(() => {
     if (!playing) return null;
@@ -28,11 +26,6 @@ startGame.addEventListener('click', () => {
   }, 1000);
 
   next();
-
-  const reset = function () {
-    lost.innerText = 0;
-    dead.innerText = 0;
-  };
 
   for (let i = 1; i < 17; i += 1) {
     const clickedHole = getHole(i);
@@ -53,3 +46,11 @@ startGame.addEventListener('click', () => {
 stopGame.addEventListener('click', () => {
   playing = false;
 });
+
+
+
+
+
+// Здравствуйте! Сделал все задание за исключением тестов, они постоянно проваливаются из-за 
+//  "TypeError: Cannot read property 'classList' of undefined"  Но написано разве не верно в тестах?
+// 
