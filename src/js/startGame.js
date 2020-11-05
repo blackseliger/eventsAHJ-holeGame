@@ -46,11 +46,3 @@ startGame.addEventListener('click', () => {
 stopGame.addEventListener('click', () => {
   playing = false;
 });
-
-
-
-
-
-// Здравствуйте! Сделал все задание за исключением тестов, они постоянно проваливаются из-за 
-//  "TypeError: Cannot read property 'classList' of undefined"  Но написано разве не верно в тестах?
-// 

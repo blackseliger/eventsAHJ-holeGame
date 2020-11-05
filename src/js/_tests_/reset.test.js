@@ -2,7 +2,6 @@
 /* eslint-disable no-undef */
 import { reset, dead, lost } from '../reset';
 
-
 describe('check work reset', () => {
   test('should reset lost and dead to default parameters', () => {
     let received = false;
